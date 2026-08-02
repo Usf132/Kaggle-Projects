@@ -7,7 +7,7 @@
 ![Kaggle](https://img.shields.io/badge/Kaggle-Competition-20BEFF?logo=kaggle&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
-An end-to-end machine learning notebook for the Kaggle **"House Prices – Advanced Regression Techniques"** competition. The project walks through data loading, missing-value imputation, categorical encoding, and two modeling approaches — a tuned **XGBoost regressor** and a **Keras artificial neural network** — to predict residential home sale prices.
+An end-to-end machine learning notebook for the [Kaggle House Prices – Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques) competition. The project walks through data loading, exploratory data analysis (EDA), missing-value imputation, feature engineering, categorical encoding, and two modeling approaches—a tuned **XGBoost Regressor** and a **Keras Artificial Neural Network (ANN)**—to predict residential home sale prices.
 
 > ⚠️ **Note:** This is a single-notebook data science project (`code.ipynb`). There is no application code, API, or CLI — everything described below reflects what is actually implemented in the notebook.
 
