@@ -189,13 +189,3 @@ No contribution guidelines are currently defined for this project. If you'd like
 2. Create a feature branch (`git checkout -b feature/your-feature`).
 3. Commit your changes.
 4. Open a pull request describing your changes.
-
----
-
-## 📌 Suggested Improvements — Project & README
-
-**Project:**
-- Convert the notebook's linear, hardcoded workflow into functions/classes with clear inputs and outputs for maintainability and testability.
-- Separate the EDA/visualization cells from the modeling pipeline so the pipeline can run headlessly.
-- Add logging and reproducibility controls (fixed seeds are already used for XGBoost `random_state`, but the ANN training has no seed set).
-- Validate the "combine train+test before imputing/encoding" approach — it works but risks data leakage patterns worth documenting explicitly.
