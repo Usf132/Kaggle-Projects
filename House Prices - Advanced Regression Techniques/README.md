@@ -5,7 +5,7 @@
 ![XGBoost](https://img.shields.io/badge/XGBoost-Regressor-006400)
 ![TensorFlow](https://img.shields.io/badge/TensorFlow-Keras-FF6F00?logo=tensorflow&logoColor=white)
 ![Kaggle](https://img.shields.io/badge/Kaggle-Competition-20BEFF?logo=kaggle&logoColor=white)
-![License](https://img.shields.io/badge/License-Not%20specified-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-lightgrey)
 
 An end-to-end machine learning notebook for the Kaggle **"House Prices – Advanced Regression Techniques"** competition. The project walks through data loading, missing-value imputation, categorical encoding, and two modeling approaches — a tuned **XGBoost regressor** and a **Keras artificial neural network** — to predict residential home sale prices.
 
@@ -46,8 +46,6 @@ An end-to-end machine learning notebook for the Kaggle **"House Prices – Advan
 | Deep Learning | TensorFlow / Keras (`Sequential`, `Dense`, `CSVLogger`, Keras backend) |
 | Serialization | `pickle` |
 
-No web framework, database, or front-end technology is used in this project.
-
 ---
 
 ## 📁 Project Structure
@@ -70,8 +68,6 @@ House Prices - Advanced Regression Techniques/
     ├── submission.csv                  # Generated Kaggle submission
     └── training_log.csv                # Per-epoch ANN loss log (CSVLogger output)
 ```
-
-> No `requirements.txt`, `LICENSE`, `.gitignore`, `src/` folder, or standalone `.py` scripts are present in the project as uploaded.
 
 ---
 
@@ -133,19 +129,6 @@ pip install numpy pandas matplotlib seaborn scikit-learn xgboost tensorflow jupy
 
    > ⚠️ **Implementation note:** the notebook's final write step (cell writing predictions) saves output to `data/sample_submission.csv`, **overwriting the original Kaggle sample file** rather than writing to `outputs/submission.csv`. The `outputs/submission.csv` file included in this repo appears to be a separately generated artifact. If reusing this notebook, consider changing the output path to avoid overwriting source data.
 
----
-
-## 🔧 Configuration
-
-There is no external configuration file (no `.env`, `config.yaml`, or CLI arguments). All parameters — file paths, the hyperparameter search grid, and ANN architecture — are hardcoded directly inside the notebook cells and must be edited in-place to change behavior.
-
----
-
-## 🔌 API Endpoints
-
-Not applicable — this project is a data analysis/modeling notebook with no web server, REST API, or CLI interface.
-
----
 
 ## 🖼️ Screenshots
 
@@ -153,9 +136,7 @@ The notebook generates the following visual artifacts during execution:
 
 | Missing Values (by column) | Missing Values (by row) | ANN Training Curve |
 |---|---|---|
-| `images/missing_values_heatmap.png` | `images/missing_values_heatmap_rows.png` | `images/ann_training_curve.png` |
-
-<!-- Embed once hosted, e.g.: ![Missing Values Heatmap](images/missing_values_heatmap.png) -->
+| ![](images/missing_values_heatmap.png) | ![](images/missing_values_heatmap_rows.png) | ![](images/ann_training_curve.png) |
 
 ---
 
@@ -211,18 +192,6 @@ No contribution guidelines are currently defined for this project. If you'd like
 
 ---
 
-## 📄 License
-
-No license file is included in this project. All rights reserved by default unless a license is added by the author.
-
----
-
-## 👤 Author
-
-Author information is not specified anywhere in the project files. Update this section with your name/handle and contact details.
-
----
-
 ## 📌 Suggested Improvements — Project & README
 
 **Project:**
@@ -230,9 +199,3 @@ Author information is not specified anywhere in the project files. Update this s
 - Separate the EDA/visualization cells from the modeling pipeline so the pipeline can run headlessly.
 - Add logging and reproducibility controls (fixed seeds are already used for XGBoost `random_state`, but the ANN training has no seed set).
 - Validate the "combine train+test before imputing/encoding" approach — it works but risks data leakage patterns worth documenting explicitly.
-
-**README:**
-- Once real screenshots are hosted (e.g. pushed to GitHub), replace the placeholder table with actual embedded `![]()` images.
-- Add a "Results" section with the model's actual Kaggle leaderboard score or validation RMSE, if available.
-- If author/license details are decided later, fill in the corresponding sections rather than leaving them as "not specified."
-- Consider adding a Table of Contents for easier navigation, since this README is fairly long.
